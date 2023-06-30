@@ -177,7 +177,7 @@ The scheduler treats 'Allocatable' as the available `capacity` for pods.
 
 `kubelet` enforce 'Allocatable' across pods by default. Enforcement is performed
 by evicting pods whenever the overall usage across all pods exceeds
-'Allocatable'. More details on eviction policy can be found
+'Allocatable' (after accounting for hard eviction threshold)  . More details on eviction policy can be found
 on the [node pressure eviction](/docs/concepts/scheduling-eviction/node-pressure-eviction/)
 page. This enforcement is controlled by
 specifying `pods` value to the kubelet flag `--enforce-node-allocatable`.
